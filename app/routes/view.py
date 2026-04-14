@@ -39,6 +39,14 @@ def view_route():
     meta = get_upload(file_id)
     username = meta["username"] if meta else "unknown"
 
+    upload_time = meta.get("time")
+
+    if upload_time:
+        dt = datetime.datetime.fromtimestamp(upload_time)
+        time_str = dt.strftime("%Y-%m-%d %H:%M")
+    else:
+        time_str = "unknown"
+
     if is_discord:
         return f"""
         <!DOCTYPE html>
@@ -47,7 +55,7 @@ def view_route():
             <meta property="og:type" content="website">
             <meta property="og:url" content="{url}">
             <meta property="og:image" content="{image_url}">
-            <meta property="og:site_name" content="saintofwillow.online">
+            <meta property="og:site_name" content="Image uploaded by {username} at {time_str}">
             <meta property="og:description" content="{description}">
             <meta property="og:image:width" content="1200">
             <meta property="og:image:height" content="630">
