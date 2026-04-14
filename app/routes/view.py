@@ -57,8 +57,6 @@ def view_route():
             <meta property="og:image" content="{image_url}">
             <meta property="og:site_name" content="Image uploaded by {username} at {time_str}">
             <meta property="og:description" content="{description}">
-            <meta property="og:image:width" content="1200">
-            <meta property="og:image:height" content="630">
 
             <meta name="twitter:card" content="summary_large_image">
             <meta name="twitter:title" content="{filename}">
