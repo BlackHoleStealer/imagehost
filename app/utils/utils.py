@@ -3,7 +3,8 @@ import random
 PRESETS = {
     "default": "abcdefghijklmnopqrstuvwxyz0123456789",
     "emoji": "💀🥶😈😭😢🥺😡🤬🥵👿😔😎😂😤😨🤓👍❌",
-    "nazi": "卐卍✡ᛋᛋ✙"
+    "nazi": "卐ᛋᛋ✙",
+    "tnt": "ابجدهوزحطيكلمنسعفصقر"
 }
 
 def generate_id(preset="default", length=12):
