@@ -1,9 +1,16 @@
-USERS = {
-    "7xsxd7": "Willow"
-}
+import json
+import os
 
-def get_user_by_key(key):
-    for user_id, data in USERS.items():
-        if data["key"] == key:
-            return user_id, data
-    return None, None
+USERS_FILE = "app/data/users.json"
+
+def load_users():
+    if os.path.exists(USERS_FILE):
+        with open(USERS_FILE, "r") as f:
+            return json.load(f)
+    return {}
+
+USERS = load_users()
+
+
+def get_user(api_key: str):
+    return USERS.get(api_key)
