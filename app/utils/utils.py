@@ -2,7 +2,8 @@ import random
 
 PRESETS = {
     "default": "abcdefghijklmnopqrstuvwxyz0123456789",
-    "emoji": "💀🥶☠️😈😭😢🥺😡🤬❤️🥵👿😔😎😂😤😨🤓🗣️👍❌"
+    "emoji": "💀🥶😈😭😢🥺😡🤬🥵👿😔😎😂😤😨🤓👍❌",
+    "nazi": "卐卍✡ᛋᛋ✙"
 }
 
 def generate_id(preset="default", length=12):
